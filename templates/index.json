@@ -20,6 +20,7 @@
     },
     "1659062490d61bddad": {
       "type": "dev-image-banner",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/finalillustration2.jpg",
         "image_overlay_opacity": 0,
@@ -33,10 +34,18 @@
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
+    },
+    "1659235750d1219d71": {
+      "type": "home-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/finalillustration2_1.png",
+        "url": "shopify:\/\/collections\/products"
+      }
     }
   },
   "order": [
     "image_banner",
-    "1659062490d61bddad"
+    "1659062490d61bddad",
+    "1659235750d1219d71"
   ]
 }
