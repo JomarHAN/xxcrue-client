@@ -1,0 +1,55 @@
+{% if section.settings.image != blank %}
+    <div class="home-banner">
+        {% if section.settings.url != blank %}
+            <a class="home-banner__container" href="{{ section.settings.url }}" title="">
+        {% else %}
+            <div class="home-banner__container">
+        {% endif %}
+
+        {% assign image = section.settings.image %}
+        <img class="home-banner__image" loading="lazy" 
+            srcset="{% if image.width >= 360 %}{{ image | image_url: width: 360 }} 360w,{% endif %}
+                {% if image.width >= 400 %}{{ image | image_url: width: 400 }} 400w,{% endif %}
+                {% if image.width >= 600 %}{{ image | image_url: width: 600 }} 600w,{% endif %}
+                {% if image.width >= 800 %}{{ image | image_url: width: 800 }} 800w,{% endif %}
+                {% if image.width >= 1000 %}{{ image | image_url: width: 1000 }} 1000w,{% endif %}
+                {% if image.width >= 1200 %}{{ image | image_url: width: 1200 }} 1200w,{% endif %}
+                {% if image.width >= 1400 %}{{ image | image_url: width: 1400 }} 1400w,{% endif %}
+                {% if image.width >= 1600 %}{{ image | image_url: width: 1600 }} 1600w,{% endif %}
+                {{ image | image_url: width: image.width }} {{ image.width }}w"
+            
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+            alt="{{ image.alt }}"
+        />
+        {% if section.settings.url != blank %}
+            </a>
+        {% else %}
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
+{% schema %}
+{
+    "name": "Home Banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "url",
+            "id": "url",
+            "label": "URL"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Home Banner"
+        }
+    ]
+}
+{% endschema %}
