@@ -1,0 +1,16 @@
+.banner--custom {
+  height: 100%;
+}
+
+.banner--custom .banner__media {
+  background-color: #fff;
+}
+
+.section--custom {
+  height: 80vh;
+  background-color: #fff;
+}
+
+.banner--custom .media > img {
+  object-fit: contain;
+}
