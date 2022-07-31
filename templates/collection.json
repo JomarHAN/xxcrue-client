@@ -2,10 +2,39 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "background-1"
+      }
+    },
+    "165925435696fad900": {
+      "type": "rich-text",
+      "blocks": {
+        "16592543567a8bee72-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "WELCOME!",
+            "heading_size": "text-body"
+          }
+        },
+        "16592543567a8bee72-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>JOIN CRUE AS A CREATOR AND EMPOWER YOUR INNER VOICE<\/p><p>Share your story and rise to the greates version of yourself.<br\/><br\/><strong>SELECT A STYLE<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16592543567a8bee72-0",
+        "16592543567a8bee72-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "product-grid": {
@@ -29,6 +58,7 @@
   },
   "order": [
     "banner",
+    "165925435696fad900",
     "product-grid"
   ]
 }

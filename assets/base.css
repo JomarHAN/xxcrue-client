@@ -73,7 +73,8 @@
   --color-button-text: var(--color-background);
 }
 
-.button--secondary {
+.button--secondary,
+button.shopify-payment-button__button {
   --color-button: var(--color-base-outline-button-labels);
   --color-button-text: var(--color-base-outline-button-labels);
   --color-button: var(--color-background);
@@ -81,13 +82,17 @@
 }
 
 .color-background-2 .button--secondary,
+.color-background-2 button.shopify-payment-button__button,
 .color-accent-1 .button--secondary,
-.color-accent-2 .button--secondary {
+.color-accent-1 button.shopify-payment-button__button,
+.color-accent-2 .button--secondary,
+.color-accent-2 button.shopify-payment-button__button {
   --color-button: var(--color-background);
   --color-button-text: var(--color-foreground);
 }
 
-.color-inverse .button--secondary {
+.color-inverse .button--secondary,
+.color-inverse button.shopify-payment-button__button {
   --color-button: var(--color-background);
   --color-button-text: var(--color-foreground);
 }
@@ -1342,7 +1347,8 @@ button.shopify-payment-button__button--unbranded {
     0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
-.button--secondary:after {
+.button--secondary:after,
+button.shopify-payment-button__button::after {
   --border-opacity: var(--buttons-border-opacity);
 }
 
@@ -3054,4 +3060,60 @@ details[open] .custom-footer__item {
   height: auto;
   margin: 0;
   width: 2.2rem;
+}
+
+/* Card Product Metafields */
+.card-product__info__hr{
+  margin: 0!important;
+}
+.card-product__info__accordion {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.4rem;
+  transition: 0.4s;
+  margin-top: 1px!important;
+}
+
+.card-product__info__accordion:after {
+  content: '\2303';
+  color: #777;
+  font-weight: 100;
+  float: right;
+  margin-left: 5px;
+  transform: rotate(180deg);
+}
+
+.active:after {
+  transform: none;
+}
+
+.card-product__info__panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-top: 0px!important;
+}
+
+.dev-card__heading{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #000;
+  font-family: var(--font-body-family);
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.color-preview {
+  font-size: 1.2rem;
+  color: #000;
 }

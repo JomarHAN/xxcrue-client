@@ -5,6 +5,11 @@
   z-index: 1;
 }
 
+.rich-text__text {
+  font-family: var(--font-body-family);
+  color: #000;
+}
+
 .rich-text.rich-text--full-width {
   max-width: initial;
   width: 100%;
@@ -47,10 +52,6 @@
 .rich-text__blocks > * {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.rich-text__blocks > * + * {
-  margin-top: 2rem;
 }
 
 .rich-text__blocks > * + a {
