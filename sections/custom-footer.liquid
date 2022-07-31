@@ -68,7 +68,7 @@
             {% when 'pop-up' %}
               {% if block.settings.btn_label %}
                 <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
-                  <button id="ProductPopup-{{ block.id }}"  class=" product-popup-modal__button custom-footer__item text-body btn-plain" type="button" aria-haspopup="dialog">
+                  <button id="ProductPopup-{{ block.id }}"  class="custom-open-popup product-popup-modal__button custom-footer__item text-body btn-plain" type="button" aria-haspopup="dialog">
                     {{ block.settings.btn_label }}
                   </button>
                 </modal-opener>
@@ -79,7 +79,7 @@
   </div>
 
   {% assign popup = section.blocks | where: "type", "pop-up" | first %}
-  <modal-dialog id="PopupModal-{{ popup.id }}" class="product-popup-modal" {{ popup.shopify_attributes }}>
+  <modal-dialog id="PopupModal-{{ popup.id }}" class="product-popup-modal custom-close-popup" {{ popup.shopify_attributes }}>
     <div role="dialog" aria-label="Mission" aria-modal="true" class="product-popup-modal__content" tabindex="-1">
       {% comment %}
       {% endcomment %}
